@@ -35,10 +35,7 @@ export class UserController {
   async findAll() {
     try {
       const data = await this.userService.findAll();
-      return {
-        success: true,
-        data,
-      };
+      return data;
     } catch (error) {
       return {
         success: false,
